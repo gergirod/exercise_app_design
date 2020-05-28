@@ -1,6 +1,6 @@
 # exercise_app_design
 
-<img src=https://github.com/gergirod/exercise_app_design/tree/master/assets/image_1.jpg height=300 /> <img src=https://github.com/gergirod/exercise_app_design/tree/master/assets/image_2.jpg height=300 /> <img src=https://github.com/gergirod/exercise_app_design/tree/master/assets/image_3.jpg height=300 /> 
+<img src=https://github.com/gergirod/exercise_app_design/blob/master/assets/image_1.jpg height=300 /> <img src=https://github.com/gergirod/exercise_app_design/blob/master/assets/image_2.jpg height=300 /> <img src=https://github.com/gergirod/exercise_app_design/blob/master/assets/image_3.jpg height=300 /> 
 
 ### Simple design app for daily exercise 
 
