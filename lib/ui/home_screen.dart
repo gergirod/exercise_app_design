@@ -1,3 +1,5 @@
+import 'package:exercise_app/ui/details_screen.dart';
+import 'package:exercise_app/ui/search_bar.dart';
 import 'package:exercise_app/utils/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -53,21 +55,7 @@ class HomeScreenState extends State<HomeScreen> {
                   .textTheme
                   .display1
                   .copyWith(fontWeight: FontWeight.w900)),
-                  Container(
-                    margin: EdgeInsets.symmetric(vertical: 30),
-                    padding: EdgeInsets.symmetric(horizontal: 30, vertical: 5),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(30.0)
-                    ),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        hintText: "Search",
-                        icon: SvgPicture.asset("assets/icons/search.svg"),
-                        border: InputBorder.none
-                      ),
-                    ),
-                  ),
+                  SearchBar(),
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.all(10.0),
@@ -78,8 +66,15 @@ class HomeScreenState extends State<HomeScreen> {
                       children: <Widget>[
                         CategoryCard(src: "assets/icons/Hamburger.svg",
                           title: "Diet Recommendation"),
-                        CategoryCard(src: "assets/icons/Meditation.svg",
-                          title: "Meditation"),
+                        CategoryCard(
+                            src: "assets/icons/Meditation.svg",
+                            title: "Meditation",
+                            press: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return DetailsScreen();
+                              }),
+                              );
+                            },),
                         CategoryCard(src: "assets/icons/Excrecises.svg",
                           title: "Kegel Exercise"),
                         CategoryCard(src: "assets/icons/yoga.svg",
@@ -97,3 +92,4 @@ class HomeScreenState extends State<HomeScreen> {
   }
 
 }
+

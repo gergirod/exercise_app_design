@@ -5,10 +5,12 @@ import 'package:flutter_svg/flutter_svg.dart';
 class CategoryCard extends StatelessWidget {
   final String src;
   final String title;
+  final Function press;
   const CategoryCard({
     Key key,
     this.src,
-    this.title
+    this.title,
+    this.press
   }) : super(key: key);
 
   @override
@@ -32,9 +34,7 @@ class CategoryCard extends StatelessWidget {
         child: Material(
           color: Colors.transparent,
           child: InkWell(
-            onTap: () {
-
-            },
+            onTap: press,
             child: Padding(
               padding: const EdgeInsets.all(15.0),
               child: Column(
